@@ -30,7 +30,7 @@ const Page: FunctionComponent<PageProps> = async ({ params: { id } }) => {
     NotFound();
   }
   if (res.status !== 200) {
-    throw Error('Алдаа гарлаа');
+    console.log(res);
   }
   const post: TPost = await res.json();
   return (
